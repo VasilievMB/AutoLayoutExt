@@ -7,14 +7,14 @@
 
 import UIKit
 
-struct LayoutEdgesConstraints {
+public struct LayoutEdgesConstraints {
     
-    let left: NSLayoutConstraint
-    let right: NSLayoutConstraint
-    let top: NSLayoutConstraint
-    let bottom: NSLayoutConstraint
+    public let left: NSLayoutConstraint
+    public let right: NSLayoutConstraint
+    public let top: NSLayoutConstraint
+    public let bottom: NSLayoutConstraint
     
-    func inset(_ inset: UIEdgeInsets) -> LayoutEdgesConstraints {
+    public func inset(_ inset: UIEdgeInsets) -> LayoutEdgesConstraints {
         left.constant = inset.left
         right.constant = inset.right
         top.constant = inset.top
@@ -30,7 +30,7 @@ extension LayoutEdgesConstraints: LayoutConstraintsConvertable {
     }
 }
 
-extension LayoutEdges {
+public extension LayoutEdges {
     
     func constraint(equalTo edges: LayoutEdges) -> LayoutEdgesConstraints {
         return LayoutEdgesConstraints(

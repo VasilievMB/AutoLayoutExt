@@ -7,12 +7,12 @@
 
 import UIKit
 
-protocol LayoutConstraintsConvertable {
+public protocol LayoutConstraintsConvertable {
     
     func asLayoutConstraints() -> [NSLayoutConstraint]
 }
 
-extension LayoutConstraintsConvertable {
+public extension LayoutConstraintsConvertable {
     
     func activate() {
         NSLayoutConstraint.activate(self)
@@ -23,7 +23,7 @@ extension LayoutConstraintsConvertable {
     }
 }
 
-extension NSLayoutConstraint {
+public extension NSLayoutConstraint {
     
     static func activate(_ layoutConstraintsConvertable: LayoutConstraintsConvertable) {
         activate(layoutConstraintsConvertable.asLayoutConstraints())

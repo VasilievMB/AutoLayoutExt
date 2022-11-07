@@ -7,15 +7,15 @@
 
 import UIKit
 
-struct LayoutEdges {
+public struct LayoutEdges {
     
-    let leftAnchor: NSLayoutXAxisAnchor
-    let rightAnchor: NSLayoutXAxisAnchor
-    let topAnchor: NSLayoutYAxisAnchor
-    let bottomAnchor: NSLayoutYAxisAnchor
+    public let leftAnchor: NSLayoutXAxisAnchor
+    public let rightAnchor: NSLayoutXAxisAnchor
+    public let topAnchor: NSLayoutYAxisAnchor
+    public let bottomAnchor: NSLayoutYAxisAnchor
 }
 
-extension LayoutElement {
+public extension LayoutElement {
     
     var edges: LayoutEdges {
         return LayoutEdges(leftAnchor: leftAnchor,
