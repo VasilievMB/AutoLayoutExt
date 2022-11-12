@@ -25,7 +25,7 @@ public struct LayoutEdgesConstraints {
 
 extension LayoutEdgesConstraints: LayoutConstraintsConvertable {
     
-    func asLayoutConstraints() -> [NSLayoutConstraint] {
+    public func asLayoutConstraints() -> [NSLayoutConstraint] {
         return [left, right, top, bottom]
     }
 }
