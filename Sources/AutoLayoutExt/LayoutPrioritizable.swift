@@ -1,5 +1,5 @@
 //
-//  Prioritizable.swift
+//  LayoutPrioritizable.swift
 //  
 //
 //  Created by Mikhail on 07.11.2022.
@@ -7,12 +7,12 @@
 
 import UIKit
  
-protocol Prioritizable {
+protocol LayoutPrioritizable {
     
     mutating func prioritize(_ priority: UILayoutPriority)
 }
 
-extension Prioritizable {
+extension LayoutPrioritizable {
     
     func prioritized(_ priority: UILayoutPriority) -> Self {
         var result = self
@@ -21,14 +21,14 @@ extension Prioritizable {
     }
 }
 
-extension NSLayoutConstraint: Prioritizable {
+extension NSLayoutConstraint: LayoutPrioritizable {
     
     func prioritize(_ priority: UILayoutPriority) {
         self.priority = priority
     }
 }
 
-extension Prioritizable where Self: LayoutConstraintsConvertable {
+extension LayoutPrioritizable where Self: LayoutConstraintsConvertable {
     
     func prioritize(_ priority: UILayoutPriority) {
         asLayoutConstraints().forEach { $0.priority = priority }
