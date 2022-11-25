@@ -23,20 +23,16 @@ final class AutoLayoutExtTests: XCTestCase {
     
     func testConstraintEdges() throws {
         
-        subview.edges
-            .constraint(equalTo: parentView.edges)
-            .activate()
-        
+        NSLayoutConstraint.activate(subview.edgeAnchors.constraint(equalTo: parentView.edgeAnchors))
         parentView.layoutIfNeeded()
-        
         XCTAssertEqual(subview.frame, CGRect(x: 0, y: 0, width: 200, height: 100))
     }
     
     func testConstraintEdgesWithInset() throws {
         
-        subview.edges
-            .constraint(equalTo: parentView.edges)
-            .inset(.init(top: 10, left: 8, bottom: 20, right: 12))
+        subview.edgeAnchors
+            .constraint(equalTo: parentView.edgeAnchors)
+            .inset(by: .init(top: 10, left: 8, bottom: 20, right: 12))
             .activate()
         
         parentView.layoutIfNeeded()
