@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import AutoLayoutExt
 
 final class LayoutEdgeConstraintsTests: XCTestCase {
 
