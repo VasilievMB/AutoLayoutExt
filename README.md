@@ -8,7 +8,7 @@ Go to Xcode > File > Add Packages..., enter the URL to this repository, select d
 
 ## Usage
 
-```
+```swift
 NSLayoutConstraint.activate(
     view1.directionalEdgeAnchors
         .constraint(equalTo: view2.directionalEdgeAnchors)
