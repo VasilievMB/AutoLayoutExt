@@ -19,4 +19,3 @@ public extension LayoutElement {
         return LayoutPointAnchor(x: centerXAnchor, y: centerYAnchor)
     }
 }
-
