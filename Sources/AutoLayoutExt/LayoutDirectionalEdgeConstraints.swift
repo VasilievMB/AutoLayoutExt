@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class LayoutDirectionalEdgeConstraints {
+public class LayoutDirectionalEdgeConstraints: LayoutPrioritizable {
     
     public let leading: NSLayoutConstraint
     public let trailing: NSLayoutConstraint

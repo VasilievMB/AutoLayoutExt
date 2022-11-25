@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class LayoutPointConstraints {
+public class LayoutPointConstraints: LayoutPrioritizable {
     
     public let x: NSLayoutConstraint
     public let y: NSLayoutConstraint

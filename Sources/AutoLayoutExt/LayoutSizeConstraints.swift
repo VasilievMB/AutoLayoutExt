@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class LayoutSizeConstraints {
+public class LayoutSizeConstraints: LayoutPrioritizable {
     
     public let width: NSLayoutConstraint
     public let height: NSLayoutConstraint
